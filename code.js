@@ -29,7 +29,6 @@ function depthFirstSearch(graph, startNode, targetNode) { // This site was helpf
     for (var j = 1; j < visited.length; j++) {
         var prevNode = visited[j - 1];
         var nextNode = visited[j + 1];
-
         for (var k = 0; k < graph[prevNode].length; k++) {
             if (j == 0 || j == visited.length - 1) {
             } else if (graph[prevNode][k] == nextNode) {
@@ -73,7 +72,6 @@ function breadthFirstSearch(graph, startNode, targetNode) { // Same as above fun
     for (var j = 1; j < visited.length; j++) {
         var prevNode = visited[j - 1];
         var nextNode = visited[j + 1];
-
         for (var k = 0; k < graph[prevNode].length; k++) {
             if (j == 0 || j == visited.length - 1) {
             } else if (graph[prevNode][k] == nextNode) {
