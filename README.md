@@ -27,14 +27,14 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
-This implementation of Depth First Seach has complexity $\Theta (V^2)$.
+This implementation of Depth First Seach has complexity $\Theta (VE)$.
 There is a while loop that iterates over every V in the worst case. Inside the
-while loop there is a for loop that in the worst case is iterating over a node with
-each other node connected to it, resulting in a runtime of V as well. There is also 
-2 for loops outside the while loop calculating the actual path to the node but they 
-have the same complexity as the while loop so we can ignore them. Therefore we can 
-analyze this using loop logic (Ex: a loop inside a loop has runtime n^2) resulting 
-in runtime of $\Theta (V^2)$.
+while loop there is a for loop that iterates over a nodes edges. The worst case
+here would be a node with each other node connected to it, which results in a 
+runtime of E. There is also 2 for loops outside the while loop calculating the 
+actual path to the node but they have the same complexity as the while loop so 
+we can ignore them. Therefore we can analyze this using loop logic (Ex: a loop 
+inside a loop has runtime n*n) resulting in runtime of $\Theta (VE)$.
 
 ## Bonus
 
@@ -44,8 +44,8 @@ This implementation of Breadth First Search is very similar to the Depth
 First Search, it just uses shift instead of pop for getting the current 
 node to make a queue instead of a stack. This makes a similar scenerio 
 to Depth First Search where the while loop iterates at most V times
-and the for loop inside also iterates at most V times. This results in a
-worst case runtime of $\Theta (V^2)$.
+and the for loop inside iterates at most E times. This results in a
+worst case runtime of $\Theta (VE)$.
 
 ## Sources
 Jacob Morgan helped me with one line of code, but my implementations looks very similar. 
