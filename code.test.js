@@ -24,7 +24,7 @@ var test4sol = [];
 
 assert(checker(test1, test1sol));
 assert(checker(test2, test2sol));
-//assert(checker(test3, test3sol));
+assert(checker(test3, test3sol));
 assert(checker(test4, test4sol));
 
 var test5 = code.breadthFirstSearch([], 1, 2);
