@@ -53,3 +53,5 @@ to Depth First Search which results in a worst case runtime of $Theta (V + E)$.
 ## Sources
 Jacob Morgan helped me with one line of code, but my implementations look very similar. 
 Please know that this was unintentional and I made the rest of the code on my own.
+Also this site: https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/ 
+was helpful for analyzing depth first search
