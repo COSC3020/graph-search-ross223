@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/M24O3lId)
 # Search in Graphs
 
 Recall the pseudocode for Depth-First Search:
@@ -26,6 +27,31 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
+This implementation of Depth First Seach has worst case complexity $\Theta (V + E)$.
+The algorithm must visit a number of nodes in the graph until the target node is 
+found or until the full graph is explored based on the while loop. This means that 
+the runtime is related to the number of nodes in the graph. It also must visit some 
+amount of edges in the graph to visit all the nodes which means that the runtime 
+is related to the number of edges in the graph. This means that the average runtime is 
+some factor of V + some factor of E which can be written as $O(V + E)$. In the worst
+case the algorithm must visit all nodes and all edges which results in runtime of
+$\Theta (V + E)$.
+
+There is also 2 for loops outside the while loop calculating the actual path to 
+the node but they have the same complexity as the while loop so we can ignore 
+them. Therefore, the worst case can be written as $\Theta (V + E)$.
+
 ## Bonus
 
 Implement and analyze breadth-first search.
+
+This implementation of Breadth First Search is very similar to the Depth
+First Search, it just uses shift instead of pop for getting the current 
+node to make a queue instead of a stack. This makes a similar scenerio 
+to Depth First Search which results in a worst case runtime of $Theta (V + E)$.
+
+## Sources
+Jacob Morgan helped me with one line of code, but my implementations look very similar. 
+Please know that this was unintentional and I made the rest of the code on my own.
+Also this site: https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/ 
+was helpful for analyzing depth first search
